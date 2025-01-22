@@ -1,7 +1,7 @@
 import Swiper from "swiper"
 import { Autoplay } from "swiper/modules"
 
-import "swiper/css"
+import "swiper/swiper-bundle.css"
 
 const swipers = {
   modelsSwiper: () =>
@@ -25,6 +25,9 @@ const swipers = {
         },
         1280: {
           slidesPerView: 2.8,
+        },
+        2500: {
+          slidesPerView: 3,
         },
       },
     }),
@@ -64,6 +67,9 @@ const swipers = {
         },
         1537: {
           slidesPerView: 4,
+        },
+        2500: {
+          slidesPerView: 5,
         },
       },
     }),
