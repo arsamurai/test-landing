@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Trebuchet MS Bold";
+    src: url("TrebuchetMS-Bold.eot");
+    src:
+      local("Trebuchet MS Bold"),
+      local("TrebuchetMS-Bold"),
+      url("TrebuchetMS-Bold.eot?#iefix") format("embedded-opentype"),
+      url("TrebuchetMS-Bold.woff") format("woff"),
+      url("TrebuchetMS-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Trebuchet MS Regular";
+    src: url("TrebuchetMS.eot");
+    src:
+      local("Trebuchet MS"),
+      local("TrebuchetMS"),
+      url("TrebuchetMS.eot?#iefix") format("embedded-opentype"),
+      url("TrebuchetMS.woff") format("woff"),
+      url("TrebuchetMS.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+html {
+  @apply scroll-pt-14 overflow-x-hidden scroll-smooth;
+}
+
+body {
+  @apply overflow-x-hidden bg-background font-trebuchet-regular text-base text-gray sm:text-2xl;
+
+  .button {
+    @apply hover:bg-button-gradient-reverse inline-flex h-[60px] items-center justify-center rounded-[10px] bg-button-gradient font-trebuchet-bold text-xl text-white shadow-button-shadow outline-none transition-all disabled:pointer-events-none disabled:opacity-30 sm:h-[70px] sm:text-2xl;
+  }
+
+  .section-title {
+    @apply font-trebuchet-bold text-2xl sm:text-6xl;
+  }
+}

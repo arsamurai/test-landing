@@ -1,0 +1,27 @@
+{
+  "name": "test-land",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "prettier:format": "prettier --write './**/*.{html,ts}' --config .prettierrc"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.7",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.10",
+    "tailwindcss": "^3.4.17",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.5"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "imask": "^7.6.1",
+    "swiper": "^11.1.14"
+  }
+}
