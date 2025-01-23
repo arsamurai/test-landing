@@ -1,20 +1,40 @@
 import Swiper from "swiper"
-import { Autoplay } from "swiper/modules"
+import { Autoplay, EffectFade, Pagination } from "swiper/modules"
 
 import "swiper/swiper-bundle.css"
 
 const swipers = {
+  formsSwiper: () =>
+    new Swiper("#forms-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      modules: [Autoplay, EffectFade, Pagination],
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+      pagination: {
+        el: "#forms-swiper-pagination",
+        clickable: true,
+      },
+    }),
   modelsSwiper: () =>
-    new Swiper(".models-swiper", {
+    new Swiper("#models-swiper", {
       slidesPerView: 1,
       spaceBetween: 20,
       loop: true,
       centeredSlides: true,
+      modules: [Autoplay],
       autoplay: {
         delay: 3000,
         disableOnInteraction: false,
       },
-      modules: [Autoplay],
       breakpoints: {
         640: {
           slidesPerView: 1.5,
@@ -32,28 +52,28 @@ const swipers = {
       },
     }),
   whyJoinUsSwiper: () =>
-    new Swiper(".why-join-us-swiper", {
+    new Swiper("#why-join-us-swiper", {
       slidesPerView: 1,
       spaceBetween: 20,
       loop: true,
       centeredSlides: true,
+      modules: [Autoplay],
       autoplay: {
         delay: 3000,
         disableOnInteraction: false,
       },
-      modules: [Autoplay],
     }),
   streamingSwiper: () =>
-    new Swiper(".streaming-swiper", {
+    new Swiper("#streaming-swiper", {
       slidesPerView: 1,
       spaceBetween: 20,
       loop: true,
       centeredSlides: true,
+      modules: [Autoplay],
       autoplay: {
         delay: 3000,
         disableOnInteraction: false,
       },
-      modules: [Autoplay],
       breakpoints: {
         640: {
           slidesPerView: 1.5,
@@ -76,6 +96,7 @@ const swipers = {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  swipers.formsSwiper()
   swipers.modelsSwiper()
   swipers.whyJoinUsSwiper()
   swipers.streamingSwiper()

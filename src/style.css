@@ -38,10 +38,18 @@ body {
   @apply overflow-x-hidden bg-background font-trebuchet-regular text-base text-gray sm:text-2xl;
 
   .button {
-    @apply hover:bg-button-gradient-reverse inline-flex h-[60px] items-center justify-center rounded-[10px] bg-button-gradient font-trebuchet-bold text-xl text-white shadow-button-shadow outline-none transition-all disabled:pointer-events-none disabled:opacity-30 sm:h-[70px] sm:text-2xl;
+    @apply inline-flex h-[60px] items-center justify-center rounded-[10px] bg-button-gradient font-trebuchet-bold text-xl text-white shadow-button-shadow outline-none transition-all hover:bg-button-gradient-reverse disabled:pointer-events-none disabled:opacity-30 sm:h-[70px] sm:text-2xl;
   }
 
   .section-title {
     @apply font-trebuchet-bold text-2xl sm:text-6xl;
+  }
+
+  .swiper-pagination {
+    @apply static;
+  }
+
+  .swiper-pagination-bullet {
+    @apply mx-1 h-[5px] w-[30px] cursor-pointer rounded-md bg-[#5893FA];
   }
 }
